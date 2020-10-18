@@ -1,0 +1,11 @@
+#!/bin/bash
+
+APPLETNAME="LCDClock"
+PACKAGEDIR="package"
+RELEASEDIR="release"
+METADATA=$PACKAGEDIR"/metadata.desktop"
+VERSION=$(grep "X-KDE-PluginInfo-Version" $METADATA | sed 's/.*=//')
+
+cd $PACKAGEDIR
+zip -r ../${RELEASEDIR}/${APPLETNAME}_${VERSION}.plasmoid *
+cd ..
