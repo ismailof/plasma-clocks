@@ -72,13 +72,9 @@ Item {
         spacing: 0
 
         DigitDisplay {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
             digit: Math.floor(hours / 10)
         }
         DigitDisplay {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
             digit: hours % 10
         }
 
@@ -87,13 +83,9 @@ Item {
         }
 
         DigitDisplay {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
             digit: Math.floor(minutes / 10)
         }
         DigitDisplay {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
             digit: minutes % 10
         }
 
@@ -104,18 +96,14 @@ Item {
 
         DigitDisplay {
             visible: showSeconds
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-//             Layout.maximumHeight: parent.height * 0.7
-//             Layout.alignment: Qt.AlignBottom
+            Layout.maximumHeight: parent.height * 0.7
+            Layout.alignment: Qt.AlignBottom
             digit: Math.floor(seconds / 10)
         }
         DigitDisplay {
             visible: showSeconds
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-//             Layout.maximumHeight: parent.height * 0.7
-//             Layout.alignment: Qt.AlignBottom
+            Layout.maximumHeight: parent.height * 0.7
+            Layout.alignment: Qt.AlignBottom
             digit: seconds % 10
         }
     }

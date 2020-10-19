@@ -16,6 +16,9 @@ Item {
     property real opacityOff: 0.1
     property int opacityDelay: PlasmaCore.Units.shortDuration
 
+    Layout.fillWidth: true
+    Layout.fillHeight: true
+
     PlasmaCore.Svg {
         id: digitSvg
         //imagePath: "qrc://images/7segments"
