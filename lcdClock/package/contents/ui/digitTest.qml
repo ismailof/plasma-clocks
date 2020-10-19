@@ -12,4 +12,10 @@ RowLayout {
             digit: modelData
         }
     }
+
+    Rectangle {
+        z: -1
+        anchors.fill: parent
+        color: "black"
+    }
 }
