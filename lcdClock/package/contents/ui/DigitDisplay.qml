@@ -51,9 +51,12 @@ Item {
     }
 
     RowLayout {
-        anchors.centerIn: parent
-        width: Math.min(display.width, display.height * digitSvg.ratio * digits)
-        height: width / (digitSvg.ratio * digits)
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+        height: Math.min(display.height, width / (digitSvg.ratio * digits))
         spacing: 0
 
         Repeater {
