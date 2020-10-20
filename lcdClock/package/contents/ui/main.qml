@@ -69,42 +69,33 @@ Item {
         Layout.minimumWidth: plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : units.gridUnit
         Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? representation.width : units.gridUnit
 
-        spacing: 0
+        spacing: PlasmaCore.Units.largeSpacing
 
         DigitDisplay {
-            digit: Math.floor(hours / 10)
+            digits: 2
+            value: hours
+
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.preferredWidth: 100   // 100% = reference width
         }
         DigitDisplay {
-            digit: hours % 10
-        }
+            digits: 2
+            value: minutes
 
-        Item {
-            Layout.preferredWidth: 10
-        }
-
-        DigitDisplay {
-            digit: Math.floor(minutes / 10)
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.preferredWidth: 100   // 100% = reference width
         }
         DigitDisplay {
-            digit: minutes % 10
-        }
-
-        Item {
+            digits: 2
+            value: seconds
             visible: showSeconds
-            Layout.preferredWidth: 10
-        }
 
-        DigitDisplay {
-            visible: showSeconds
-            Layout.maximumHeight: parent.height * 0.7
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.preferredWidth: 60   // 60% of the others
             Layout.alignment: Qt.AlignBottom
-            digit: Math.floor(seconds / 10)
-        }
-        DigitDisplay {
-            visible: showSeconds
-            Layout.maximumHeight: parent.height * 0.7
-            Layout.alignment: Qt.AlignBottom
-            digit: seconds % 10
         }
     }
 }

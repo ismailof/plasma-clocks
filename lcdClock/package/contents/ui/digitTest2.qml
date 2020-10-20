@@ -6,12 +6,15 @@ ColumnLayout {
     DigitDisplay {
         Layout.fillWidth: true
         Layout.fillHeight: true
-        digit: slider.value
+        digits: 3
+        numericBase: 10
+        value: slider.value
     }
     QQC2.Slider {
         id: slider
-        from: -1
-        to: 15
+        Layout.fillWidth: true
+        from: 0
+        to: 999
         stepSize: 1.0
         snapMode: QQC2.Slider.SnapAlways
         value: 0
