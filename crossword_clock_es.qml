@@ -46,7 +46,7 @@ Item {
     }
 
     function hourWords(_hour) {
-        switch (_hour) {
+        switch (_hour % 12) {
             case 0: return "DOCE";
             case 1: return "UNA";
             case 2: return "DOS";
@@ -76,7 +76,7 @@ Item {
     }
 
     property string timeWords: {
-        let closestHour = hour + (mins > 30 ? 1 : 0);
+        let closestHour = (hour + (mins > 30 ? 1 : 0)) % 12;
 
         let sWords = (closestHour == 1) ? "ES LA" : "SON LAS"
         let mWords = minuteWords(mins)

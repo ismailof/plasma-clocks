@@ -76,7 +76,7 @@ Item {
     }
 
     property string timeWords: {
-        let closestHour = hour + (mins > 30 ? 1 : 0);
+        let closestHour = (hour + (mins > 30 ? 1 : 0)) % 12;
 
         let sWords = "IT IS"
         let mWords = minuteWords(mins)
