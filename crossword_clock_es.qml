@@ -32,7 +32,7 @@ Item {
             case 60:
                 return "EN PUNTO";
             case 5:  return "Y CINCO";
-            case 10: return "Y DIEZ";
+            case 10: return "Y 73#DIEZ";
             case 15: return "Y CUARTO";
             case 20: return "Y VEINTE";
             case 25: return "Y VEINTICINCO";
@@ -40,7 +40,7 @@ Item {
             case 35: return "MENOS VEINTICINCO";
             case 40: return "MENOS VEINTE";
             case 45: return "MENOS CUARTO";
-            case 50: return "MENOS DIEZ";
+            case 50: return "MENOS 73#DIEZ";
             case 55: return "MENOS CINCO";
         }
     }
@@ -62,38 +62,37 @@ Item {
         }
     }
 
-    function indexesOfWord(word, startPos=0) {
+    function indexesOfWord(word, startIdx=0) {
         let indexes = [];
-        let startIdx = letters.indexOf(word, startPos);
+        let foundIdx = letters.indexOf(word, startIdx);
 
-        if (startIdx < 0) {
+        if (foundIdx < 0) {
             return [];
         }
         for (let i=0; i < word.length; i++) {
-            indexes.push(startIdx + i);
+            indexes.push(foundIdx + i);
         }
         return indexes
     }
 
     property string timeWords: {
-        let closestHour = (hour + (mins > 30 ? 1 : 0)) % 12;
+        let closestHour = (hour + (mins > nextHourLimit ? 1 : 0)) % 12;
 
         let sWords = (closestHour == 1) ? "ES LA" : "SON LAS"
         let mWords = minuteWords(mins)
         let hWords = hourWords(closestHour)
 
-        let words = [sWords, hWords, mWords]
-
-        return words.join(" ")
+        return [sWords, hWords, mWords].join(" ")
     }
 
     property var highlights: {
         let allIdxs = [];
-        let prevIdx = 0;
         for (let word of timeWords.split(" ")) {
-            for (let idx of indexesOfWord(word, prevIdx)) {
+            // Word strings can be nnn#WORD, to indicate word search starts from nnn index
+            const startIdx = parseInt(word) || 0 // the index hint added to the word
+            const wordPos = word.indexOf('#') + 1; //start of the actual word, or 0 when no hint
+            for (const idx of indexesOfWord(word.substring(wordPos), startIdx)) {
                 allIdxs.push(idx);
-                prevIdx = idx + 1;
             }
         }
         return allIdxs;

@@ -33,13 +33,13 @@ Item {
                 return "ÔCLOCK";
             case 5:  return "FIVE PAST";
             case 10: return "TEN PAST";
-            case 15: return "A QUARTER PAST";
+            case 15: return "11#A QUARTER PAST";
             case 20: return "TWENTY PAST";
             case 25: return "TWENTYFIVE PAST";
             case 30: return "HALF PAST";
             case 35: return "TWENTYFIVE TO";
             case 40: return "TWENTY TO";
-            case 45: return "A QUARTER TO";
+            case 45: return "11#A QUARTER TO";
             case 50: return "TEN TO";
             case 55: return "FIVE TO";
         }
@@ -57,45 +57,42 @@ Item {
             case 7: return "SEVEN";
             case 8: return "EIGHT";
             case 9: return "NINE";
-            case 10: return "TEN";
+            case 10: return "99#TEN";
             case 11: return "ELEVEN";
         }
     }
 
-    function indexesOfWord(word, startPos=0) {
+    function indexesOfWord(word, startIdx=0) {
         let indexes = [];
-        let startIdx = letters.indexOf(word, startPos);
+        let foundIdx = letters.indexOf(word, startIdx);
 
-        if (startIdx < 0) {
+        if (foundIdx < 0) {
             return [];
         }
         for (let i=0; i < word.length; i++) {
-            indexes.push(startIdx + i);
+            indexes.push(foundIdx + i);
         }
         return indexes
     }
 
     property string timeWords: {
-        let closestHour = (hour + (mins > 30 ? 1 : 0)) % 12;
+        let closestHour = (hour + (mins >= 35 ? 1 : 0)) % 12
 
         let sWords = "IT IS"
         let mWords = minuteWords(mins)
         let hWords = hourWords(closestHour)
 
-        // HACK. It doesn't internationalize well. Better provide the indexes directly
-        let words = mWords.includes(minuteWords(0)) ? [sWords, hWords, mWords] // O'Clock goes after the hour
-                                                    : [sWords, mWords, hWords]
-
-        return words.join(" ")
+        return [sWords, mWords, hWords].join(" ")
     }
 
     property var highlights: {
         let allIdxs = [];
-        let prevIdx = 0;
         for (let word of timeWords.split(" ")) {
-            for (let idx of indexesOfWord(word, prevIdx)) {
+            // Word strings can be nnn#WORD, to indicate word search starts from nnn index
+            const startIdx = parseInt(word) || 0 // the index hint added to the word
+            const wordPos = word.indexOf('#') + 1; //start of the actual word, or 0 when no hint
+            for (const idx of indexesOfWord(word.substring(wordPos), startIdx)) {
                 allIdxs.push(idx);
-                prevIdx = idx + 2;
             }
         }
         return allIdxs;
