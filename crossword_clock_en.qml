@@ -16,7 +16,7 @@ CrossWordClock {
     }
 
     letters: "ITLISASAMPMACQUARTERDCTWENTYFIVEXHALFBTENFTOPASTERUNINEONESIXTHREEFOURFIVETWOEIGHTELEVENSEVENTWELVETENSEÔCLOCK"
-    halfShowsNextHour: false
+
     introWords: {
         "singular": "IT IS",
         "plural": "IT IS",
@@ -62,3 +62,4 @@ CrossWordClock {
         }
     }
 }
+
