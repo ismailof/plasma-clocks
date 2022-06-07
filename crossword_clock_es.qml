@@ -5,8 +5,8 @@ import org.kde.kirigami 2.12 as Kirigami
 
 Item {
     id: root
-    width: 800
-    height: 800
+    width: 400
+    height: 400
 
     readonly property string letters : "ESONPLASUNACUATROIDOCESIETEKCINCOSEISOJNUEVEDIEZTRESDOSOCHOEONCEDYMENOSRFDIEZVEINTICINCOMEDIAVEINTECUARTOPUNTO"
 
