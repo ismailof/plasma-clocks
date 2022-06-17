@@ -1,4 +1,7 @@
 /*
+    SPDX-FileCopyrightText: 2013 Heena Mahour <heena393@gmail.com>
+    SPDX-FileCopyrightText: 2013 Sebastian Kügler <sebas@kde.org>
+    SPDX-FileCopyrightText: 2013 Martin Klapetek <mklapetek@kde.org>
     SPDX-FileCopyrightText: 2022 Ismael Asensio <isma.af@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
@@ -23,8 +26,7 @@ Item {
     readonly property int _mins: Math.round(time.getMinutes() / 5) * 5
 
     // Internationalization properties
-    readonly property string letters: i18nc("String of letters that compose the clock grid, that will be arrange in a 11x10 grid.
-                                            It must contain all of the hours, minutes and introductory words employed.",
+    readonly property string letters: i18nc("String of letters that compose the clock grid, that will be arrange in a 11x10 grid.",
                                             "ITLISASAMPMACQUARTERDCTWENTYFIVEXHALFBTENFTOPASTERUNINEONESIXTHREEFOURFIVETWOEIGHTELEVENSEVENTWELVETENSEÔCLOCK")
 
     readonly property string introWords: i18ncp("Introductory words for the time",

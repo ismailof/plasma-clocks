@@ -14,7 +14,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 Item {
     id: root
 
-    property date time
+    property date time: new Date("2003-08-07 12:00")
 
     width: PlasmaCore.Units.gridUnit * 15
     height: PlasmaCore.Units.gridUnit * 15
@@ -22,41 +22,6 @@ Item {
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: CrossWordClock {
         time: root.time
-
-        letters: "ITLISASAMPMACQUARTERDCTWENTYFIVEXHALFBTENFTOPASTERUNINEONESIXTHREEFOURFIVETWOEIGHTELEVENSEVENTWELVETENSEÔCLOCK"
-        introWords: {
-            "singular": "IT IS",
-            "plural": "IT IS",
-        }
-        hourWords: {
-            0:  "TWELVE",
-            1:  "ONE",
-            2:  "TWO",
-            3:  "THREE",
-            4:  "FOUR",
-            5:  "FIVE",
-            6:  "SIX",
-            7:  "SEVEN",
-            8:  "EIGHT",
-            9:  "NINE",
-            10: "99#TEN",
-            11: "ELEVEN",
-        }
-        minuteWords: {
-            0:  "ÔCLOCK",
-            60: "ÔCLOCK", // Use 60 to simplify next hour calculation
-            5:  "FIVE PAST",
-            10: "TEN PAST",
-            15: "11#A QUARTER PAST",
-            20: "TWENTY PAST",
-            25: "TWENTYFIVE PAST",
-            30: "HALF PAST",
-            35: "TWENTYFIVE TO",
-            40: "TWENTY TO",
-            45: "11#A QUARTER TO",
-            50: "TEN TO",
-            55: "FIVE TO",
-        }
     }
 
     PlasmaCore.DataSource {
@@ -65,7 +30,7 @@ Item {
         connectedSources: "Local"
         interval: 30000
         onDataChanged: {
-            time = new Date(data["Local"]["DateTime"]);
+           time = new Date(data["Local"]["DateTime"]);
         }
         Component.onCompleted: {
             onDataChanged();
