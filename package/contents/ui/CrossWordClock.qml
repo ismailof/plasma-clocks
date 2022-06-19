@@ -53,7 +53,7 @@ Item {
                 return i18nc("Word representing the hour 4","FOUR"   )
             case 5:
             case 17:
-                return i18nc("Word representing the hour 5","FIVE"   )
+                return i18nc("Word representing the hour 5","70#FIVE"   )
             case 6:
             case 18:
                 return i18nc("Word representing the hour 6","SIX"    )
