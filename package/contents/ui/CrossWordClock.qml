@@ -22,7 +22,8 @@ Item {
 
     // The actual time "digits" to be shown
     readonly property int _hour: (time.getHours()
-                         + (_mins >= (halfShowsNextHour ? 30 : 35) ? 1 : 0)) % 24
+                                    //"@" in the minutes indicates next hour will be used
+                                    + (minuteWords.indexOf('@') >= 0 ? 1 : 0)) % 24
     readonly property int _mins: Math.round(time.getMinutes() / 5) * 5
 
     // Internationalization properties
@@ -85,16 +86,13 @@ Item {
             case 20: return i18nc("Words representing the minutes :20", "TWENTY PAST")
             case 25: return i18nc("Words representing the minutes :25", "TWENTYFIVE PAST")
             case 30: return i18nc("Words representing the minutes :30", "HALF PAST")
-            case 35: return i18nc("Words representing the minutes :35", "TWENTYFIVE TO")
-            case 40: return i18nc("Words representing the minutes :40", "TWENTY TO")
-            case 45: return i18nc("Words representing the minutes :45", "11#A QUARTER TO")
-            case 50: return i18nc("Words representing the minutes :50", "TEN TO")
-            case 55: return i18nc("Words representing the minutes :55", "FIVE TO")
+            case 35: return i18nc("Words representing the minutes :35", "TWENTYFIVE TO @")
+            case 40: return i18nc("Words representing the minutes :40", "TWENTY TO @")
+            case 45: return i18nc("Words representing the minutes :45", "11#A QUARTER TO @")
+            case 50: return i18nc("Words representing the minutes :50", "TEN TO @")
+            case 55: return i18nc("Words representing the minutes :55", "FIVE TO @")
         }
     }
-
-    // Special language toggles
-    property bool halfShowsNextHour: false  // For GERMAN
 
     readonly property var highlights: indexesOfSentence([introWords, minuteWords, hourWords].join(" "))
 
@@ -116,16 +114,20 @@ Item {
     }
 
     function indexesOfSentence(sentence) {
-        let allIdxs = [];
+        let allIdxs = []
         for (let word of sentence.split(" ")) {
-            // Word strings can be nnn#WORD, to indicate word search starts from nnn index
+            // A sentence can contain '@' to indicate that the next hour should be used
+            if (word === "@") {
+                continue
+            }
+            // Word strings can start with a number followed by '#' to indicate an index hint
             const startIdx = parseInt(word) || 0 // the index hint added to the word
-            const wordPos = word.indexOf('#') + 1; //start of the actual word, or 0 when no hint
+            const wordPos = word.indexOf('#') + 1 //start of the actual word, or 0 when no hint
             for (const idx of indexesOfWord(word.substring(wordPos), startIdx)) {
-                allIdxs.push(idx);
+                allIdxs.push(idx)
             }
         }
-        return allIdxs;
+        return allIdxs
     }
 
     GridLayout {
