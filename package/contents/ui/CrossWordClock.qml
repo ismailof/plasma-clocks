@@ -22,7 +22,7 @@ Item {
 
     // The actual time "digits" to be shown
     readonly property int _hour: (time.getHours()
-                         + (_mins >= (halfShowsNextHour ? 30 : 35) ? 1 : 0)) % 12
+                         + (_mins >= (halfShowsNextHour ? 30 : 35) ? 1 : 0)) % 24
     readonly property int _mins: Math.round(time.getMinutes() / 5) * 5
 
     // Internationalization properties
@@ -34,18 +34,44 @@ Item {
 
     readonly property string hourWords: {
         switch (_hour) {
-            case 0:  return i18nc("Word representing the hour 12","TWELVE")
-            case 1:  return i18nc("Word representing the hour 1","ONE"    )
-            case 2:  return i18nc("Word representing the hour 2","TWO"    )
-            case 3:  return i18nc("Word representing the hour 3","THREE"  )
-            case 4:  return i18nc("Word representing the hour 4","FOUR"   )
-            case 5:  return i18nc("Word representing the hour 5","FIVE"   )
-            case 6:  return i18nc("Word representing the hour 6","SIX"    )
-            case 7:  return i18nc("Word representing the hour 7","SEVEN"  )
-            case 8:  return i18nc("Word representing the hour 8","EIGHT"  )
-            case 9:  return i18nc("Word representing the hour 9","NINE"   )
-            case 10: return i18nc("Word representing the hour 10","99#TEN")
-            case 11: return i18nc("Word representing the hour 11","ELEVEN")
+            case 0:
+                return i18nc("Word representing the hour 12 (AM)","TWELVE")
+            case 12:
+                // Some languages (FR) make the distinction betwen 12AM and 12PM
+                return i18nc("Word representing the hour 12 (PM)","TWELVE")
+            case 1:
+            case 13:
+                return i18nc("Word representing the hour 1","ONE"    )
+            case 2:
+            case 14:
+                return i18nc("Word representing the hour 2","TWO"    )
+            case 3:
+            case 15:
+                return i18nc("Word representing the hour 3","THREE"  )
+            case 4:
+            case 16:
+                return i18nc("Word representing the hour 4","FOUR"   )
+            case 5:
+            case 17:
+                return i18nc("Word representing the hour 5","FIVE"   )
+            case 6:
+            case 18:
+                return i18nc("Word representing the hour 6","SIX"    )
+            case 7:
+            case 19:
+                return i18nc("Word representing the hour 7","SEVEN"  )
+            case 8:
+            case 20:
+                return i18nc("Word representing the hour 8","EIGHT"  )
+            case 9:
+            case 21:
+                return i18nc("Word representing the hour 9","NINE"   )
+            case 10:
+            case 22:
+                return i18nc("Word representing the hour 10","99#TEN")
+            case 11:
+            case 23:
+                return i18nc("Word representing the hour 11","ELEVEN")
         }
     }
     readonly property string minuteWords: {

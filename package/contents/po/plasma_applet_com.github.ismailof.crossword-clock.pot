@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 00:13+0200\n"
+"POT-Creation-Date: 2022-06-20 00:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,122 +37,122 @@ msgctxt "Word representing the hour 12 (AM)"
 msgid "TWELVE"
 msgstr ""
 
-#: ui/CrossWordClock.qml:39
+#: ui/CrossWordClock.qml:41
 msgctxt "Word representing the hour 12 (PM)"
 msgid "TWELVE"
 msgstr ""
 
-#: ui/CrossWordClock.qml:40
+#: ui/CrossWordClock.qml:44
 msgctxt "Word representing the hour 1"
 msgid "ONE"
 msgstr ""
 
-#: ui/CrossWordClock.qml:41
+#: ui/CrossWordClock.qml:47
 msgctxt "Word representing the hour 2"
 msgid "TWO"
 msgstr ""
 
-#: ui/CrossWordClock.qml:42
+#: ui/CrossWordClock.qml:50
 msgctxt "Word representing the hour 3"
 msgid "THREE"
 msgstr ""
 
-#: ui/CrossWordClock.qml:43
+#: ui/CrossWordClock.qml:53
 msgctxt "Word representing the hour 4"
 msgid "FOUR"
 msgstr ""
 
-#: ui/CrossWordClock.qml:44
+#: ui/CrossWordClock.qml:56
 msgctxt "Word representing the hour 5"
 msgid "FIVE"
 msgstr ""
 
-#: ui/CrossWordClock.qml:45
+#: ui/CrossWordClock.qml:59
 msgctxt "Word representing the hour 6"
 msgid "SIX"
 msgstr ""
 
-#: ui/CrossWordClock.qml:46
+#: ui/CrossWordClock.qml:62
 msgctxt "Word representing the hour 7"
 msgid "SEVEN"
 msgstr ""
 
-#: ui/CrossWordClock.qml:47
+#: ui/CrossWordClock.qml:65
 msgctxt "Word representing the hour 8"
 msgid "EIGHT"
 msgstr ""
 
-#: ui/CrossWordClock.qml:48
+#: ui/CrossWordClock.qml:68
 msgctxt "Word representing the hour 9"
 msgid "NINE"
 msgstr ""
 
-#: ui/CrossWordClock.qml:49
+#: ui/CrossWordClock.qml:71
 msgctxt "Word representing the hour 10"
 msgid "99#TEN"
 msgstr ""
 
-#: ui/CrossWordClock.qml:50
+#: ui/CrossWordClock.qml:74
 msgctxt "Word representing the hour 11"
 msgid "ELEVEN"
 msgstr ""
 
-#: ui/CrossWordClock.qml:57
+#: ui/CrossWordClock.qml:81
 msgctxt "Words representing the minutes :00"
 msgid "ÔCLOCK"
 msgstr ""
 
-#: ui/CrossWordClock.qml:58
+#: ui/CrossWordClock.qml:82
 msgctxt "Words representing the minutes :05"
 msgid "FIVE PAST"
 msgstr ""
 
-#: ui/CrossWordClock.qml:59
+#: ui/CrossWordClock.qml:83
 msgctxt "Words representing the minutes :10"
 msgid "TEN PAST"
 msgstr ""
 
-#: ui/CrossWordClock.qml:60
+#: ui/CrossWordClock.qml:84
 msgctxt "Words representing the minutes :15"
 msgid "11#A QUARTER PAST"
 msgstr ""
 
-#: ui/CrossWordClock.qml:61
+#: ui/CrossWordClock.qml:85
 msgctxt "Words representing the minutes :20"
 msgid "TWENTY PAST"
 msgstr ""
 
-#: ui/CrossWordClock.qml:62
+#: ui/CrossWordClock.qml:86
 msgctxt "Words representing the minutes :25"
 msgid "TWENTYFIVE PAST"
 msgstr ""
 
-#: ui/CrossWordClock.qml:63
+#: ui/CrossWordClock.qml:87
 msgctxt "Words representing the minutes :30"
 msgid "HALF PAST"
 msgstr ""
 
-#: ui/CrossWordClock.qml:64
+#: ui/CrossWordClock.qml:88
 msgctxt "Words representing the minutes :35"
 msgid "TWENTYFIVE TO"
 msgstr ""
 
-#: ui/CrossWordClock.qml:65
+#: ui/CrossWordClock.qml:89
 msgctxt "Words representing the minutes :40"
 msgid "TWENTY TO"
 msgstr ""
 
-#: ui/CrossWordClock.qml:66
+#: ui/CrossWordClock.qml:90
 msgctxt "Words representing the minutes :45"
 msgid "11#A QUARTER TO"
 msgstr ""
 
-#: ui/CrossWordClock.qml:67
+#: ui/CrossWordClock.qml:91
 msgctxt "Words representing the minutes :50"
 msgid "TEN TO"
 msgstr ""
 
-#: ui/CrossWordClock.qml:68
+#: ui/CrossWordClock.qml:92
 msgctxt "Words representing the minutes :55"
 msgid "FIVE TO"
 msgstr ""
