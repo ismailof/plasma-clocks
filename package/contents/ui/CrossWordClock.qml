@@ -21,9 +21,8 @@ Item {
     property date time: new Date("2000-12-17 10:10:00")
 
     // The actual time "digits" to be shown
-    readonly property int _hour: (time.getHours()
-                                    //"@" in the minutes indicates next hour will be used
-                                    + (minuteWords.indexOf('@') >= 0 ? 1 : 0)) % 24
+    //"@" in the minutes indicates next hour will be used
+    readonly property int _hour: (time.getHours() + (_mins === 60 || minuteWords.includes('@') ? 1 : 0)) % 24
     readonly property int _mins: Math.round(time.getMinutes() / 5) * 5
 
     // Internationalization properties
