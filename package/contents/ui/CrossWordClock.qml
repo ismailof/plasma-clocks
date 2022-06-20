@@ -41,31 +41,31 @@ Item {
                 return i18nc("Word representing the hour 12 (PM)","TWELVE")
             case 1:
             case 13:
-                return i18nc("Word representing the hour 1","ONE"    )
+                return i18nc("Word representing the hour 1","ONE")
             case 2:
             case 14:
-                return i18nc("Word representing the hour 2","TWO"    )
+                return i18nc("Word representing the hour 2","TWO")
             case 3:
             case 15:
-                return i18nc("Word representing the hour 3","THREE"  )
+                return i18nc("Word representing the hour 3","THREE")
             case 4:
             case 16:
-                return i18nc("Word representing the hour 4","FOUR"   )
+                return i18nc("Word representing the hour 4","FOUR")
             case 5:
             case 17:
-                return i18nc("Word representing the hour 5","70#FIVE"   )
+                return i18nc("Word representing the hour 5","70#FIVE")
             case 6:
             case 18:
-                return i18nc("Word representing the hour 6","SIX"    )
+                return i18nc("Word representing the hour 6","SIX")
             case 7:
             case 19:
-                return i18nc("Word representing the hour 7","SEVEN"  )
+                return i18nc("Word representing the hour 7","SEVEN")
             case 8:
             case 20:
-                return i18nc("Word representing the hour 8","EIGHT"  )
+                return i18nc("Word representing the hour 8","EIGHT")
             case 9:
             case 21:
-                return i18nc("Word representing the hour 9","NINE"   )
+                return i18nc("Word representing the hour 9","NINE")
             case 10:
             case 22:
                 return i18nc("Word representing the hour 10","99#TEN")
