@@ -27,7 +27,7 @@ Item {
 
     // Internationalization properties
     readonly property string letters: i18nc("String of letters that compose the clock grid, that will be arrange in a 11x10 grid.",
-                                            "ITLISASAMPMACQUARTERDCTWENTYFIVEXHALFBTENFTOPASTERUNINEONESIXTHREEFOURFIVETWOEIGHTELEVENSEVENTWELVETENSEO'CLOCK")
+                                            "ITLISASAMPMACQUARTERDCTWENTYFIVEXHALFBTENFTOPASTERUNINEONESIXTHREEFOURFIVETWOEIGHTELEVENSEVENTWELVETENSEO'CLOCK").trim()
 
     readonly property string introWords: i18ncp("Introductory words for the time",
                                                 "IT IS", "IT IS", _hour)
@@ -111,7 +111,7 @@ Item {
     }
 
     readonly property int columns: Math.ceil(Math.sqrt(letters.length - specialIdxs.length))  // 11
-    readonly property int rows: (letters.length - specialIdxs.length) / columns               // 10
+    readonly property int rows: Math.ceil((letters.length - specialIdxs.length) / columns)    // 10
 
     function indexesOfWord(word, startIdx=0) {
         let indexes = [];
