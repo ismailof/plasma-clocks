@@ -27,7 +27,7 @@ Item {
 
     // Internationalization properties
     readonly property string letters: i18nc("String of letters that compose the clock grid, that will be arrange in a 11x10 grid.",
-                                            "ITLISASAMPMACQUARTERDCTWENTYFIVEXHALFBTENFTOPASTERUNINEONESIXTHREEFOURFIVETWOEIGHTELEVENSEVENTWELVETENSEÔCLOCK")
+                                            "ITLISASAMPMACQUARTERDCTWENTYFIVEXHALFBTENFTOPASTERUNINEONESIXTHREEFOURFIVETWOEIGHTELEVENSEVENTWELVETENSEO'CLOCK")
 
     readonly property string introWords: i18ncp("Introductory words for the time",
                                                 "IT IS", "IT IS", _hour)
@@ -78,7 +78,7 @@ Item {
         switch (_mins) {
             case 0:
             case 60: // Use also 60 to simplify calculation of the next hour
-                return i18nc("Words representing the minutes :00", "ÔCLOCK")
+                return i18nc("Words representing the minutes :00", "O'CLOCK")
             case 5:  return i18nc("Words representing the minutes :05", "FIVE PAST")
             case 10: return i18nc("Words representing the minutes :10", "TEN PAST")
             case 15: return i18nc("Words representing the minutes :15", "11#A QUARTER PAST")
@@ -95,9 +95,23 @@ Item {
 
     readonly property var highlights: indexesOfSentence([introWords, minuteWords, hourWords].join(" "))
 
-    // Derivate properties
-    readonly property int columns: Math.ceil(Math.sqrt(letters.length))  // 11
-    readonly property int rows: (letters.length / columns)               // 10
+    // Array with indexes of special characters
+    readonly property var specialIdxs: {
+        let _specialIdxs = []
+        let _startIdx = 0
+        while (true) {
+            let idx = letters.indexOf("\'", _startIdx)
+            if (idx === -1) {
+                break
+            }
+            _specialIdxs.push(idx)
+            _startIdx = idx + 1
+        }
+        return _specialIdxs
+    }
+
+    readonly property int columns: Math.ceil(Math.sqrt(letters.length - specialIdxs.length))  // 11
+    readonly property int rows: (letters.length - specialIdxs.length) / columns               // 10
 
     function indexesOfWord(word, startIdx=0) {
         let indexes = [];
@@ -137,18 +151,19 @@ Item {
         columns: root.columns
 
         Repeater {
-            model: letters.length
+            model: letters.length - specialIdxs.length
             delegate: PC3.Label {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
-                readonly property bool active: highlights.includes(index)
+                readonly property int actualIndex: index + specialIdxs.filter((idx, i) => index + i >= idx).length
+                readonly property bool active: highlights.includes(actualIndex)
 
                 horizontalAlignment: Text.AlignHCenter
                 font.bold:true
                 font.pixelSize: Math.floor(grid.height / root.rows)
 
-                text: letters[index]
+                text: letters[actualIndex] + (specialIdxs.includes(actualIndex + 1) ? letters[actualIndex + 1] : "")
                 opacity: active ? 1 : 0.1
 
                 Behavior on opacity {
