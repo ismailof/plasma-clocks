@@ -17,8 +17,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 Item {
     id: lcdclock
 
-    width: units.gridUnit * 15
-    height: units.gridUnit * 7
+    width: PlasmaCore.Units.gridUnit * 15
+    height: PlasmaCore.Units.gridUnit * 7
 
     property int hours
     property int minutes
@@ -40,7 +40,7 @@ Item {
         connectedSources: "Local"
         interval: showSeconds ? 1000 : 30000
         onDataChanged: {
-            var date = new Date(data["Local"]["DateTime"]);
+            let date = new Date(data["Local"]["DateTime"]);
             hours = date.getHours();
             minutes = date.getMinutes();
             seconds = date.getSeconds();
@@ -66,8 +66,8 @@ Item {
 
     Plasmoid.compactRepresentation: RowLayout {
         id: representation
-        Layout.minimumWidth: plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : units.gridUnit
-        Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? representation.width : units.gridUnit
+        Layout.minimumWidth: Plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : PlasmaCore.Units.gridUnit
+        Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? representation.width : PlasmaCore.Units.gridUnit
 
         spacing: PlasmaCore.Units.largeSpacing
 
