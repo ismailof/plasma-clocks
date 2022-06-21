@@ -45,7 +45,7 @@ Item {
     PlasmaCore.Svg {
         id: digitSvg
         //imagePath: "qrc://images/7segments"
-        imagePath: "file:///home/isma/Proyectos/lcdClock/package/contents/ui/7segments.svg"
+        imagePath: "file:///home/isma/Proyectos/plasma-clocks/lcdClock/package/contents/ui/7segments.svg"
 
         readonly property real ratio: size.width / size.height
     }
