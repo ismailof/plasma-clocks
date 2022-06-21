@@ -95,6 +95,11 @@ Item {
 
     readonly property var highlights: indexesOfSentence([introWords, minuteWords, hourWords].join(" "))
 
+    // Helper for language debugging
+    onHighlightsChanged: {
+        console.log(time.toLocaleTimeString() + " > intro: " + introWords + "  " + _hour + "h: " + hourWords + "  " + _mins + "m: " + minuteWords)
+    }
+
     // Array with indexes of special characters
     readonly property var specialIdxs: {
         let _specialIdxs = []
