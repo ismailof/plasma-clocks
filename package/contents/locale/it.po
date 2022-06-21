@@ -1,0 +1,156 @@
+# Header entry was created by Lokalize.
+#
+# Ismael <ismailof@github.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-21 00:21+0200\n"
+"PO-Revision-Date: 2022-06-21 00:21+0200\n"
+"Last-Translator: Ismael <ismailof@github.com>\n"
+"Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.11.70\n"
+
+#: ui/CrossWordClock.qml:30
+msgctxt ""
+"String of letters that compose the clock grid, that will be arrange in a "
+"11x10 grid."
+msgid "ITLISASAMPMACQUARTERDCTWENTYFIVEXHALFBTENFTOPASTERUNINEONESIXTHREEFOURFIVETWOEIGHTELEVENSEVENTWELVETENSEO'CLOCK"
+msgstr "SONORLEBOREÈRL'UNASDUEZTREOTTONOVEDIECIUNDICIDODICISETTEQUATTROCSEICINQUEAMENOEKUNLQUARTOVENTICINQUEDIECILMEZZA"
+
+#: ui/CrossWordClock.qml:33
+msgctxt "Introductory words for the time"
+msgid "IT IS"
+msgid_plural "IT IS"
+msgstr[0] "È L'"
+msgstr[1] "SONO LE"
+
+#: ui/CrossWordClock.qml:38
+msgctxt "Word representing the hour 12 (AM)"
+msgid "TWELVE"
+msgstr "DODICI"
+
+#: ui/CrossWordClock.qml:41
+msgctxt "Word representing the hour 12 (PM)"
+msgid "TWELVE"
+msgstr "DODICI"
+
+#: ui/CrossWordClock.qml:44
+msgctxt "Word representing the hour 1"
+msgid "ONE"
+msgstr "UNA"
+
+#: ui/CrossWordClock.qml:47
+msgctxt "Word representing the hour 2"
+msgid "TWO"
+msgstr "DUE"
+
+#: ui/CrossWordClock.qml:50
+msgctxt "Word representing the hour 3"
+msgid "THREE"
+msgstr "TRE"
+
+#: ui/CrossWordClock.qml:53
+msgctxt "Word representing the hour 4"
+msgid "FOUR"
+msgstr "QUATTRO"
+
+#: ui/CrossWordClock.qml:56
+msgctxt "Word representing the hour 5"
+msgid "70#FIVE"
+msgstr "CINQUE"
+
+#: ui/CrossWordClock.qml:59
+msgctxt "Word representing the hour 6"
+msgid "SIX"
+msgstr "SEI"
+
+#: ui/CrossWordClock.qml:62
+msgctxt "Word representing the hour 7"
+msgid "SEVEN"
+msgstr "SETTE"
+
+#: ui/CrossWordClock.qml:65
+msgctxt "Word representing the hour 8"
+msgid "EIGHT"
+msgstr "OTTO"
+
+#: ui/CrossWordClock.qml:68
+msgctxt "Word representing the hour 9"
+msgid "NINE"
+msgstr "NOVE"
+
+#: ui/CrossWordClock.qml:71
+msgctxt "Word representing the hour 10"
+msgid "99#TEN"
+msgstr "DIECI"
+
+#: ui/CrossWordClock.qml:74
+msgctxt "Word representing the hour 11"
+msgid "ELEVEN"
+msgstr "UNDICI"
+
+#: ui/CrossWordClock.qml:81
+msgctxt "Words representing the minutes :00"
+msgid "O'CLOCK"
+msgstr ""
+
+#: ui/CrossWordClock.qml:82
+msgctxt "Words representing the minutes :05"
+msgid "FIVE PAST"
+msgstr "77#E 93#CINQUE"
+
+#: ui/CrossWordClock.qml:83
+msgctxt "Words representing the minutes :10"
+msgid "TEN PAST"
+msgstr "77#E 99#DIECI"
+
+#: ui/CrossWordClock.qml:84
+msgctxt "Words representing the minutes :15"
+msgid "11#A QUARTER PAST"
+msgstr "77#E UN QUARTO"
+
+#: ui/CrossWordClock.qml:85
+msgctxt "Words representing the minutes :20"
+msgid "TWENTY PAST"
+msgstr "77#E VENTI"
+
+#: ui/CrossWordClock.qml:86
+msgctxt "Words representing the minutes :25"
+msgid "TWENTYFIVE PAST"
+msgstr "77#E VENTICINQUE"
+
+#: ui/CrossWordClock.qml:87
+msgctxt "Words representing the minutes :30"
+msgid "HALF PAST"
+msgstr "77#E MEZZA"
+
+#: ui/CrossWordClock.qml:88
+msgctxt "Words representing the minutes :35"
+msgid "TWENTYFIVE TO @"
+msgstr "MENO VENTICINQUE @"
+
+#: ui/CrossWordClock.qml:89
+msgctxt "Words representing the minutes :40"
+msgid "TWENTY TO @"
+msgstr "MENO VENTI @"
+
+#: ui/CrossWordClock.qml:90
+msgctxt "Words representing the minutes :45"
+msgid "11#A QUARTER TO @"
+msgstr "MENO UN QUARTO @"
+
+#: ui/CrossWordClock.qml:91
+msgctxt "Words representing the minutes :50"
+msgid "TEN TO @"
+msgstr "MENO 99#DIECI @"
+
+#: ui/CrossWordClock.qml:92
+msgctxt "Words representing the minutes :55"
+msgid "FIVE TO @"
+msgstr "MENO 93#CINQUE @"
