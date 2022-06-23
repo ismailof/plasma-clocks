@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 16:51+0200\n"
-"PO-Revision-Date: 2022-06-20 16:51+0200\n"
+"POT-Creation-Date: 2022-06-24 00:07+0200\n"
+"PO-Revision-Date: 2022-06-25 01:38+0200\n"
 "Last-Translator: Ismael <ismailof@github.com>\n"
 "Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
 "Language: es_ES\n"
@@ -132,25 +132,25 @@ msgstr "Y MEDIA"
 
 #: ui/CrossWordClock.qml:88
 msgctxt "Words representing the minutes :35"
-msgid "TWENTYFIVE TO @"
-msgstr "MENOS VEINTICINCO @"
+msgid "TWENTYFIVE TO +"
+msgstr "MENOS VEINTICINCO +"
 
 #: ui/CrossWordClock.qml:89
 msgctxt "Words representing the minutes :40"
-msgid "TWENTY TO @"
-msgstr "MENOS VEINTE @"
+msgid "TWENTY TO +"
+msgstr "MENOS VEINTE +"
 
 #: ui/CrossWordClock.qml:90
 msgctxt "Words representing the minutes :45"
-msgid "11#A QUARTER TO @"
-msgstr "MENOS CUARTO @"
+msgid "11#A QUARTER TO +"
+msgstr "MENOS CUARTO +"
 
 #: ui/CrossWordClock.qml:91
 msgctxt "Words representing the minutes :50"
-msgid "TEN TO @"
-msgstr "MENOS 99#DIEZ @"
+msgid "TEN TO +"
+msgstr "MENOS 99#DIEZ +"
 
 #: ui/CrossWordClock.qml:92
 msgctxt "Words representing the minutes :55"
-msgid "FIVE TO @"
-msgstr "MENOS 83#CINCO @"
+msgid "FIVE TO +"
+msgstr "MENOS 83#CINCO +"

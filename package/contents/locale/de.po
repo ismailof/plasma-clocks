@@ -5,11 +5,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 16:51+0200\n"
-"PO-Revision-Date: 2022-06-20 13:46+0200\n"
+"POT-Creation-Date: 2022-06-24 00:07+0200\n"
+"PO-Revision-Date: 2022-06-25 01:54+0200\n"
 "Last-Translator: Ismael <ismailof@github.com>\n"
 "Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
-"Language: es_ES\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -123,34 +123,34 @@ msgstr "ZWANZIG NACH"
 #: ui/CrossWordClock.qml:86
 msgctxt "Words representing the minutes :25"
 msgid "TWENTYFIVE PAST"
-msgstr "FÜNF VOR HALB @"
+msgstr "FÜNF VOR HALB +"
 
 #: ui/CrossWordClock.qml:87
 msgctxt "Words representing the minutes :30"
 msgid "HALF PAST"
-msgstr "HALB @"
+msgstr "HALB +"
 
 #: ui/CrossWordClock.qml:88
 msgctxt "Words representing the minutes :35"
-msgid "TWENTYFIVE TO @"
-msgstr "FÜNF NACH HALB @"
+msgid "TWENTYFIVE TO +"
+msgstr "FÜNF NACH HALB +"
 
 #: ui/CrossWordClock.qml:89
 msgctxt "Words representing the minutes :40"
-msgid "TWENTY TO @"
-msgstr "ZWANZIG VOR @"
+msgid "TWENTY TO +"
+msgstr "ZWANZIG VOR +"
 
 #: ui/CrossWordClock.qml:90
 msgctxt "Words representing the minutes :45"
-msgid "11#A QUARTER TO @"
-msgstr "VIERTEL VOR @"
+msgid "11#A QUARTER TO +"
+msgstr "VIERTEL VOR +"
 
 #: ui/CrossWordClock.qml:91
 msgctxt "Words representing the minutes :50"
-msgid "TEN TO @"
-msgstr "ZEHN VOR @"
+msgid "TEN TO +"
+msgstr "ZEHN VOR +"
 
 #: ui/CrossWordClock.qml:92
 msgctxt "Words representing the minutes :55"
-msgid "FIVE TO @"
-msgstr "FÜNF VOR @"
+msgid "FIVE TO +"
+msgstr "FÜNF VOR +"

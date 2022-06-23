@@ -21,8 +21,8 @@ Item {
     property date time: new Date("2000-12-17 10:10:00")
 
     // The actual time "digits" to be shown
-    //"@" in the minutes indicates next hour will be used
-    readonly property int _hour: (time.getHours() + (_mins === 60 || minuteWords.includes('@') ? 1 : 0)) % 24
+    //"+" in the minutes indicates next hour will be used
+    readonly property int _hour: (time.getHours() + (_mins === 60 || minuteWords.includes('+') ? 1 : 0)) % 24
     readonly property int _mins: Math.round((time.getMinutes() + time.getSeconds()/60) / 5) * 5
 
     // Internationalization properties
@@ -85,11 +85,11 @@ Item {
             case 20: return i18nc("Words representing the minutes :20", "TWENTY PAST")
             case 25: return i18nc("Words representing the minutes :25", "TWENTYFIVE PAST")
             case 30: return i18nc("Words representing the minutes :30", "HALF PAST")
-            case 35: return i18nc("Words representing the minutes :35", "TWENTYFIVE TO @")
-            case 40: return i18nc("Words representing the minutes :40", "TWENTY TO @")
-            case 45: return i18nc("Words representing the minutes :45", "11#A QUARTER TO @")
-            case 50: return i18nc("Words representing the minutes :50", "TEN TO @")
-            case 55: return i18nc("Words representing the minutes :55", "FIVE TO @")
+            case 35: return i18nc("Words representing the minutes :35", "TWENTYFIVE TO +")
+            case 40: return i18nc("Words representing the minutes :40", "TWENTY TO +")
+            case 45: return i18nc("Words representing the minutes :45", "11#A QUARTER TO +")
+            case 50: return i18nc("Words representing the minutes :50", "TEN TO +")
+            case 55: return i18nc("Words representing the minutes :55", "FIVE TO +")
         }
     }
 
@@ -134,8 +134,8 @@ Item {
     function indexesOfSentence(sentence) {
         let allIdxs = []
         for (let word of sentence.split(" ")) {
-            // A sentence can contain '@' to indicate that the next hour should be used
-            if (word === "@") {
+            // A sentence can contain '+' to indicate that the next hour should be used
+            if (word === "+") {
                 continue
             }
             // Word strings can start with a number followed by '#' to indicate an index hint

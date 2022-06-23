@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 16:51+0200\n"
+"POT-Creation-Date: 2022-06-24 00:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -134,25 +134,25 @@ msgstr ""
 
 #: ui/CrossWordClock.qml:88
 msgctxt "Words representing the minutes :35"
-msgid "TWENTYFIVE TO @"
+msgid "TWENTYFIVE TO +"
 msgstr ""
 
 #: ui/CrossWordClock.qml:89
 msgctxt "Words representing the minutes :40"
-msgid "TWENTY TO @"
+msgid "TWENTY TO +"
 msgstr ""
 
 #: ui/CrossWordClock.qml:90
 msgctxt "Words representing the minutes :45"
-msgid "11#A QUARTER TO @"
+msgid "11#A QUARTER TO +"
 msgstr ""
 
 #: ui/CrossWordClock.qml:91
 msgctxt "Words representing the minutes :50"
-msgid "TEN TO @"
+msgid "TEN TO +"
 msgstr ""
 
 #: ui/CrossWordClock.qml:92
 msgctxt "Words representing the minutes :55"
-msgid "FIVE TO @"
+msgid "FIVE TO +"
 msgstr ""
