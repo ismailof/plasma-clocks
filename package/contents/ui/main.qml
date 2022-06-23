@@ -29,6 +29,7 @@ Item {
         engine: "time"
         connectedSources: "Local"
         interval: 30000
+        intervalAlignment: PlasmaCore.Types.AlignToMinute
         onDataChanged: {
            time = new Date(data["Local"]["DateTime"]);
         }

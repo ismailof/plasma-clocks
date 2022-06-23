@@ -23,7 +23,7 @@ Item {
     // The actual time "digits" to be shown
     //"@" in the minutes indicates next hour will be used
     readonly property int _hour: (time.getHours() + (_mins === 60 || minuteWords.includes('@') ? 1 : 0)) % 24
-    readonly property int _mins: Math.round(time.getMinutes() / 5) * 5
+    readonly property int _mins: Math.round((time.getMinutes() + time.getSeconds()/60) / 5) * 5
 
     // Internationalization properties
     readonly property string letters: i18nc("String of letters that compose the clock grid, that will be arrange in a 11x10 grid.",
