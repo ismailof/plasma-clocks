@@ -30,7 +30,7 @@ Item {
                                             "ITLISASAMPMACQUARTERDCTWENTYFIVEXHALFBTENFTOPASTERUNINEONESIXTHREEFOURFIVETWOEIGHTELEVENSEVENTWELVETENSEO'CLOCK").trim()
 
     readonly property string introWords: i18ncp("Introductory words for the time",
-                                                "IT IS", "IT IS", _hour)
+                                                "IT IS", "IT IS", _hour % 12)
 
     readonly property string hourWords: {
         switch (_hour) {
