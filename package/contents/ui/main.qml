@@ -22,6 +22,9 @@ Item {
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: CrossWordClock {
         time: root.time
+
+        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 6
+        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 6
     }
 
     PlasmaCore.DataSource {
