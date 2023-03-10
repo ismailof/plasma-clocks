@@ -1,0 +1,29 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "isma.af@gmail.com",
+                "Name": "Ismael Asensio"
+            }
+        ],
+        "Category": "Date and Time",
+        "Dependencies": [
+        ],
+        "EnabledByDefault": false,
+        "Icon": "clock",
+        "Id": "com.github.ismailof.lcdclock",
+        "License": "GPL-2.0+",
+        "Name": "LCD Clock",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "0.1.0"
+    },
+    "X-KDE-PluginInfo-Description": "A classical LCD 7-segment digits clock",
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.time"
+    ],
+    "X-Plasma-StandAloneApp": true
+}

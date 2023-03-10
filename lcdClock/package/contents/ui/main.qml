@@ -12,6 +12,7 @@ import QtQuick.Layouts 1.12
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasma5support 2.0 as P5Support
 
 
 Item {
@@ -34,7 +35,7 @@ Item {
     Plasmoid.toolTipSubText: Qt.formatDate(dataSource.data["Local"]["DateTime"],
                                            Qt.locale().dateFormat(Locale.LongFormat).replace(/(^dddd.?\s)|(,?\sdddd$)/, ""))
 
-    PlasmaCore.DataSource {
+    P5Support.DataSource {
         id: dataSource
         engine: "time"
         connectedSources: "Local"
