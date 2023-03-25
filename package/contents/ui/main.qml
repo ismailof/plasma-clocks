@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasma5support 2.0 as P5Support
 
 
 Item {
@@ -27,7 +28,7 @@ Item {
         Layout.minimumHeight: PlasmaCore.Units.gridUnit * 6
     }
 
-    PlasmaCore.DataSource {
+    P5Support.DataSource {
         id: dataSource
         engine: "time"
         connectedSources: "Local"
@@ -40,5 +41,4 @@ Item {
             onDataChanged();
         }
     }
-
 }
