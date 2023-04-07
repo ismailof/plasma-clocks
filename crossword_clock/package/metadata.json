@@ -1,0 +1,33 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "isma.af@gmail.com",
+                "Name": "Ismael Asensio"
+            }
+        ],
+        "Category": "Date and Time",
+        "Description": "Time displayed in a stylish word grid",
+        "Description[es]": "Reloj con estilo de palabras cruzadas",
+        "FormFactors": [
+            "tablet",
+            "handset",
+            "desktop"
+        ],
+        "Icon": "preferences-system-time",
+        "Id": "com.github.ismailof.crossword-clock",
+        "License": "GPL-2.0+",
+        "Name": "Crossword Clock",
+        "Name[es]": "Reloj crucigrama",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "0.1"
+    },
+    "X-KDE-ParentApp": "org.kde.plasmashell",
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.time"
+    ]
+}
