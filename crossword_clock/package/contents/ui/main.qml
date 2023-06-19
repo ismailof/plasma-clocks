@@ -12,7 +12,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
 
 
-Item {
+PlasmoidItem {
     id: root
 
     property date time: new Date("2003-08-07 12:00")
@@ -20,8 +20,7 @@ Item {
     width: PlasmaCore.Units.gridUnit * 15
     height: PlasmaCore.Units.gridUnit * 15
 
-    Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
-    Plasmoid.compactRepresentation: CrossWordClock {
+    fullRepresentation: CrossWordClock {
         time: root.time
 
         Layout.minimumWidth: PlasmaCore.Units.gridUnit * 6
@@ -33,7 +32,7 @@ Item {
         engine: "time"
         connectedSources: "Local"
         interval: 30000
-        intervalAlignment: PlasmaCore.Types.AlignToMinute
+        //intervalAlignment: P5Support.Types.AlignToMinute
         onDataChanged: {
            time = new Date(data["Local"]["DateTime"]);
         }
