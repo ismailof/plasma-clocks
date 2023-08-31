@@ -8,7 +8,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.14
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2 as Kirigami
 
 
 Item {
@@ -148,7 +148,7 @@ Item {
         id: grid
 
         anchors.fill: parent
-        anchors.margins: PlasmaCore.Units.gridUnit
+        anchors.margins: Kirigami.Units.gridUnit
         columns: root.columns
 
         Repeater {
@@ -168,7 +168,7 @@ Item {
                 opacity: active ? 1 : 0.1
 
                 Behavior on opacity {
-                    NumberAnimation { duration: 4 * PlasmaCore.Units.longDuration } // or just a fixed 500
+                    NumberAnimation { duration: 4 * Kirigami.Units.longDuration } // or just a fixed 500
                 }
             }
         }

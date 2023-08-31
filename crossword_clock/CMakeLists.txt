@@ -7,5 +7,6 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(KDEInstallDirs)
 
 find_package(KF6Plasma REQUIRED)
+find_package(KF6Kirigami2 REQUIRED)
 
 plasma_install_package(package com.github.ismailof.crossword-clock)

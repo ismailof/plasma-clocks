@@ -8,23 +8,22 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasma5support 2.0 as P5Support
-
+import org.kde.kirigami 2 as Kirigami
 
 PlasmoidItem {
     id: root
 
     property date time: new Date("2003-08-07 12:00")
 
-    width: PlasmaCore.Units.gridUnit * 15
-    height: PlasmaCore.Units.gridUnit * 15
+    width: Kirigami.Units.gridUnit * 15
+    height: Kirigami.Units.gridUnit * 15
 
     fullRepresentation: CrossWordClock {
         time: root.time
 
-        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 6
-        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 6
+        Layout.minimumWidth: Kirigami.Units.gridUnit * 6
+        Layout.minimumHeight: Kirigami.Units.gridUnit * 6
     }
 
     P5Support.DataSource {
