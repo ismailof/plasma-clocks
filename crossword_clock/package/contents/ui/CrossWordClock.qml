@@ -1,8 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2013 Heena Mahour <heena393@gmail.com>
-    SPDX-FileCopyrightText: 2013 Sebastian Kügler <sebas@kde.org>
-    SPDX-FileCopyrightText: 2013 Martin Klapetek <mklapetek@kde.org>
-    SPDX-FileCopyrightText: 2022 Ismael Asensio <isma.af@gmail.com>
+    SPDX-FileCopyrightText: 2023 Ismael Asensio <isma.af@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
