@@ -23,7 +23,7 @@
         "ServiceTypes": [
             "Plasma/Applet"
         ],
-        "Version": "0.1",
+        "Version": "0.2",
         "Website": "https://github.com/ismailof/plasma-clocks"
     },
     "X-KDE-ParentApp": "org.kde.plasmashell",
@@ -32,5 +32,6 @@
     "X-Plasma-Provides": [
         "org.kde.plasma.time"
     ],
+    "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-StandAloneApp": true
 }
